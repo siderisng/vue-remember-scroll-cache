@@ -6,6 +6,7 @@ This plugin was created as a usecase for an ecommerce website. Our category view
 
 ![Alt Text](https://s9.gifyu.com/images/Screen-Recording-2021-08-27-at-3.47.58-PM-1.gif)
 
+<img src="https://s9.gifyu.com/images/Screen-Recording-2021-08-27-at-3.47.58-PM-1.gif"/>
 
 ## How it works
 

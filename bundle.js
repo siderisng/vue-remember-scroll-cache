@@ -1,13 +1,8 @@
 (function (global, factory) {
-  typeof exports === "object" && typeof module !== "undefined"
-    ? (module.exports = factory())
-    : typeof define === "function" && define.amd
-    ? define(factory)
-    : ((global =
-        typeof globalThis !== "undefined" ? globalThis : global || self),
-      (global.bundle = factory()));
-})(this, function () {
-  "use strict";
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+  typeof define === 'function' && define.amd ? define(factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.bundle = factory());
+}(this, (function () { 'use strict';
 
   // Copyright Giorgos Sideris 2021
   // github.com/siderisng
@@ -73,4 +68,5 @@
   };
 
   return index;
-});
+
+})));

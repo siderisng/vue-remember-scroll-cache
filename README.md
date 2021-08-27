@@ -4,7 +4,8 @@ Vue plugin that provides functionality for remembering scroll position and loade
 ## Use case
 This plugin was created as a usecase for an ecommerce website. Our category view page has an infinity loader (loads more products as we scroll down). We want to retain the loaded products and scroll position after clicking on a product and redirecting to the product page and then navigating back to the category view page. We want to create a seamless transition going between category view listing and product view page so that the user can continue exploring the available products without losing their progress.
 
-[![https://s9.gifyu.com/images/Screen-Recording-2021-08-27-at-3.47.58-PM-1.gif](https://s9.gifyu.com/images/Screen-Recording-2021-08-27-at-3.47.58-PM-1.gif)]()
+![Alt Text](https://s9.gifyu.com/images/Screen-Recording-2021-08-27-at-3.47.58-PM-1.gif)
+
 
 ## How it works
 

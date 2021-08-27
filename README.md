@@ -12,7 +12,7 @@ This plugin was created as a usecase for an ecommerce website. Our category view
 4. User goes back to the catalog page
 5. Previously loaded items are inserted by the plugin into the vue component using the directive, thus retaining all items previously loaded
 6. Previous scroll position is restored.
-7. User is at the same place they started and can continue scrolling down without losing their previous position in the category view page
+7. User is at the same place they started and can continue scrolling down without losing their previous position in the category view page 🙂
 
 ## Installation
 

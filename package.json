@@ -1,11 +1,11 @@
 {
   "name": "vue-remember-scroll-cache",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Vue plugin that provides functionality for remembering scroll position and loaded items in a catalog page after navigating back and forth to a single item page, with customisable options. ",
-  "main": "bundle.js",
+  "main": "bundle.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup index.js --file bundle.js --format umd --name \"bundle\""
+    "build": "rollup --config"
   },
   "author": "Giorgos Sideris",
   "keywords": [
@@ -16,5 +16,19 @@
     "position",
     "navigation"
   ],
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.15.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-filesize": "^9.1.1",
+    "rollup-plugin-multi-entry": "^2.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-progress": "^1.1.2",
+    "rollup-plugin-uglify": "^6.0.4"
+  }
 }

@@ -4,7 +4,7 @@
 // const defaultOptions = {}
 
 const linkAction = (el, binding, vnode, Vue, selector) => {
-  const itemsName = binding.value?.itemsName;
+  const itemsName = binding.value.itemsName;
 
   const links = el.querySelectorAll(selector);
   links.forEach(link => {
@@ -38,8 +38,8 @@ export default {
         const scrollPosition = localStorage.getItem(
           "v-remember-scroll-position"
         );
-        const itemsName = binding.value?.itemsName;
-        const selector = binding.value?.selector;
+        const itemsName = binding.value.itemsName;
+        const selector = binding.value.selector;
 
         // console.log('scrollPosition', scrollPosition)
         if (scrollPosition) {
@@ -53,7 +53,7 @@ export default {
         linkAction(el, binding, vnode, Vue, selector);
       },
       componentUpdated: (el, binding, vnode) => {
-        const selector = binding.value?.selector;
+        const selector = binding.value.selector;
         // REPEAT ACTION FOR CREATING LISTENERS AFTER COMPONENT UPDATE
         linkAction(el, binding, vnode, Vue, selector);
       },

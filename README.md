@@ -41,6 +41,6 @@ Catalog view
 `itemsName` should contain the name of the internal state variable that holds all items that are listed. In this example our vue component has an internal state variable called `products` that is an array of all products in our ecommerce category view. `this.products` will be repopulated with the products loaded earlier when scrolling down the category view of our app.
 
 
-`selector` contains the css element selector to use for applying the click event listeners. In this example we want our plugin to run when a link (`a` tag) inside our div container is used
+`selector` should contain the css element selector to use for applying the click event listeners. In this example we want our plugin to run when a link (`a` tag) inside our div container is used
 
 

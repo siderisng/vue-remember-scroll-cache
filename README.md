@@ -32,7 +32,7 @@ import VueRememberScrollCache from 'vue-remember-scroll-cache'
 Vue.use(VueRememberScrollCache)
 ```
 
-In vue template:
+In vue component template:
 ```
 <div v-remember-scroll-cache="{ itemsName: 'products', selector: 'a' }">
 Catalog view
@@ -45,4 +45,12 @@ Catalog view
 
 `selector` should contain the css element selector to use for applying the click event listeners. In this example we want our plugin to run when a link (`a` tag) inside our div container is used
 
+
+In component script section:
+```
+if (this.$products && this.$products.length > 0) {
+      this.products = this.$products
+}
+```
+^^ The plugin creates a global variable in this case (`$products`) and then deletes it after a short time period (3s), so on `mounted` of our component, we check if the global var is there and update our internal state. (instead of fetching from the API like normal, this time we want to recover previously loaded content after user navigation to product page and back)
 

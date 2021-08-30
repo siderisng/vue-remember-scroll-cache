@@ -1,7 +1,9 @@
 # vue-remember-scroll-cache
+
 Vue plugin that provides functionality for remembering scroll position and loaded items in a catalog page after navigating back and forth to a single item page, with customisable options.
 
 ## Use case
+
 This plugin was created as a usecase for an ecommerce website. Our category view page has an infinity loader (loads more products as we scroll down). We want to retain the loaded products and scroll position after clicking on a product and redirecting to the product page and then navigating back to the category view page. We want to create a seamless transition going between category view listing and product view page so that the user can continue exploring the available products without losing their progress.
 
 ![Demo GIF](https://s9.gifyu.com/images/Screen-Recording-2021-08-27-at-3.47.58-PM.gif)
@@ -25,6 +27,7 @@ npm i --save vue-remember-scroll-cache
 ### Usage
 
 In main.js or any other vue entry point:
+
 ```
 import Vue from 'vue'
 import VueRememberScrollCache from 'vue-remember-scroll-cache'
@@ -33,6 +36,7 @@ Vue.use(VueRememberScrollCache)
 ```
 
 In vue component template:
+
 ```
 <div v-remember-scroll-cache="{ itemsName: 'products', selector: 'a' }">
 Catalog view
@@ -42,15 +46,14 @@ Catalog view
 
 `itemsName` should contain the name of the internal state variable that holds all items that are listed. In this example our vue component has an internal state variable called `products` that is an array of all products in our ecommerce category view. `this.products` will be repopulated with the products loaded earlier when scrolling down the category view of our app.
 
-
-`selector` should contain the css element selector to use for applying the click event listeners. In this example we want our plugin to run when a link (`a` tag) inside our div container is used
-
+`selector` should contain the css element selector to use for applying the click event listeners. In this example we want our plugin to run when a link (`a` tag) inside our div container is _clicked_
 
 In component script section:
+
 ```
 if (this.$products && this.$products.length > 0) {
       this.products = this.$products
 }
 ```
-^^ The plugin creates a global variable in this case (`$products`) and then deletes it after a short time period (3s), so on `mounted` of our component, we check if the global var is there and update our internal state. (instead of fetching from the API like normal, this time we want to recover previously loaded content after user navigation to product page and back)
 
+^^ The plugin creates a global variable in this case (`$products`) and then deletes it after a short time period (3s), so on `mounted` of our component, we check if the global var is there and update our internal state. (instead of fetching from the API like normal, this time we want to recover previously loaded content after user navigation to product page and back)

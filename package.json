@@ -1,6 +1,6 @@
 {
   "name": "vue-remember-scroll-cache",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Vue plugin that provides functionality for remembering scroll position and loaded items in a catalog page after navigating back and forth to a single item page, with customisable options. ",
   "main": "bundle.min.js",
   "scripts": {

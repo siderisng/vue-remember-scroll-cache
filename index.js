@@ -48,7 +48,7 @@ export default {
             localStorage.removeItem("v-remember-scroll-position");
             localStorage.removeItem("v-remember-scroll-page");
             Vue.prototype[`$${itemsName}`] = null;
-          }, 3000);
+          }, 2000);
           //   console.log('moving to ', scrollPosition)
           setTimeout(() => {
             if (
@@ -56,7 +56,7 @@ export default {
               window.location.pathname
             )
               window.scrollTo(0, scrollPosition);
-          }, 2000);
+          }, 1500);
         }
         linkAction(el, binding, vnode, Vue, selector);
       },

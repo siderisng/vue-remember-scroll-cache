@@ -51,7 +51,8 @@ Catalog view
 In component script section:
 
 ```
-if (this.$products && this.$products.length > 0) {
+const prevPage = localStorage.getItem('v-remember-scroll-page')
+if (this.$products && this.$products.length > 0 && prevPage === window.location.hostname) {
       this.products = this.$products
 }
 ```

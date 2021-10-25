@@ -63,7 +63,9 @@ export default {
       componentUpdated: (el, binding, vnode) => {
         const selector = binding.value.selector;
         // REPEAT ACTION FOR CREATING LISTENERS AFTER COMPONENT UPDATE
-        linkAction(el, binding, vnode, Vue, selector);
+        setTimeout(() => {
+          linkAction(el, binding, vnode, Vue, selector);
+        }, 500);
       },
     });
   },
